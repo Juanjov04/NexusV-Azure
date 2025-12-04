@@ -16,7 +16,7 @@ class ProfileController extends Controller
      */
     public function edit(Request $request): View
     {
-        // Añadimos las relaciones necesarias para mostrar métodos de pago
+        // Añadimos las relaciones necesarias para mostrar métodos de pago (Integración de la nueva funcionalidad)
         $user = $request->user()->load('paymentMethods'); 
         
         return view('profile.edit', [
@@ -25,7 +25,7 @@ class ProfileController extends Controller
     }
     
     /**
-     * Muestra el historial de pagos del usuario comprador.
+     * Muestra el historial de pagos del usuario comprador. (Nuevo método)
      */
     public function payments(Request $request): View
     {
@@ -39,7 +39,6 @@ class ProfileController extends Controller
             
         return view('profile.payments', compact('payments'));
     }
-
 
     /**
      * Update the user's profile information.

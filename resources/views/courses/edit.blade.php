@@ -110,9 +110,10 @@
                     </div>
                 </form>
 
+                <hr class="mt-8 mb-6 border-t border-gray-200" />
                 
                 {{-- AÑADIDO: GESTIÓN DE MÓDULOS (Fase 4.1) --}}
-                <div class="border-t border-gray-200 mt-8 pt-6">
+                <div class="pt-6">
                     <h3 class="text-xl font-bold text-gray-900 mb-4">{{ __('Gestión de Módulos (Contenido)') }}</h3>
                     
                     <div class="flex justify-end mb-4">
@@ -148,8 +149,10 @@
                 {{-- FIN GESTIÓN DE MÓDULOS --}}
                 
                 
+                <hr class="mt-8 mb-6 border-t border-gray-200" />
+                
                 {{-- Formulario para Eliminar Curso (Permanente) --}}
-                <div class="border-t border-gray-200 mt-8 pt-6">
+                <div class="pt-6">
                     <h3 class="text-lg font-medium text-gray-900 mb-4">{{ __('Eliminar Curso') }}</h3>
                     <p class="text-sm text-gray-600 mb-4">{{ __('Una vez eliminado, no se puede recuperar. Esto también elimina todos los registros de módulos e inscripciones.') }}</p>
                     

@@ -5,7 +5,9 @@ namespace App\Models;
 // Importaciones necesarias
 use App\Models\Course;
 use App\Models\Enrollment;
-use App\Models\PaymentMethod; // <-- NUEVA IMPORTACIÓN
+use App\Models\PaymentMethod; // <-- NUEVA IMPORTACIÓN para métodos de pago
+use App\Models\Payment; // <-- IMPORTACIÓN NECESARIA para el historial de pagos
+
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
@@ -50,7 +52,7 @@ class User extends Authenticatable
     /**
      * Get the payment methods for the user.
      */
-    public function paymentMethods(): HasMany // <-- RELACIÓN FALTANTE AGREGADA
+    public function paymentMethods(): HasMany // Nueva relación: métodos de pago guardados
     {
         return $this->hasMany(PaymentMethod::class);
     }
@@ -58,14 +60,14 @@ class User extends Authenticatable
     /**
      * Get the payments made by the user (needed for history).
      */
-    public function payments(): HasMany // <-- RELACIÓN AGREGADA para ProfileController::payments()
+    public function payments(): HasMany // Nueva relación: historial de pagos
     {
         return $this->hasMany(Payment::class);
     }
 
 
     // =======================================================
-    // NUEVOS HELPERS PARA ROLES JERÁRQUICOS
+    // HELPERS PARA ROLES JERÁRQUICOS
     // =======================================================
 
     /**

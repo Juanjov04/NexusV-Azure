@@ -7,14 +7,12 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use App\Models\Module;
-use App\Models\Payment; // Importado
+use App\Models\Payment; // Importado para la nueva relación de pagos
 
 class Course extends Model
 {
     use HasFactory;
 
-    // ... (fillable, casts, y user() se mantienen igual) ...
-    
     public function modules(): HasMany
     {
         // Cargar módulos ordenados por el campo sequence_order
@@ -30,8 +28,9 @@ class Course extends Model
         'price',
         'is_published',
     ];
+    
     protected $casts = [
-        'scheduled_date' => 'datetime',
+        'scheduled_date' => 'datetime', // Asegura que el campo se maneje como objeto fecha/hora
     ];
 
     /**
@@ -41,8 +40,8 @@ class Course extends Model
     {
         return $this->belongsTo(User::class);
     }
-
-    // --- RELACIONES EXISTENTES ---
+    
+    // --- RELACIONES EXISTENTES (Enrollment) ---
 
     /**
      * Get the users enrolled in this course.

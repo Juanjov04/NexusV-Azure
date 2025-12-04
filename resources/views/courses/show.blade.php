@@ -9,7 +9,7 @@
         <div class="max-w-4xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg p-6">
 
-                {{-- MUESTRA MENSAJES FLASH DE ÉXITO O ERROR DE PAGO --}}
+                {{-- MUESTRA MENSAJES FLASH DE PAGO (SUCCESS/ERROR) --}}
                 @if (session('success'))
                     <div class="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative mb-4" role="alert">
                         <strong class="font-bold">¡Éxito!</strong>
@@ -19,6 +19,13 @@
                     <div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative mb-4" role="alert">
                         <strong class="font-bold">Error de Pago:</strong>
                         <span class="block sm:inline">{{ session('error') }}</span>
+                    </div>
+                @endif
+                {{-- MUESTRA MENSAJE FLASH DE INFORMACIÓN (INFO, ej: si ya está matriculado) --}}
+                @if (session('info'))
+                    <div class="bg-blue-100 border border-blue-400 text-blue-700 px-4 py-3 rounded relative mb-4" role="alert">
+                        <strong class="font-bold">Información:</strong>
+                        <span class="block sm:inline">{{ session('info') }}</span>
                     </div>
                 @endif
                 {{-- FIN DE MENSAJES FLASH --}}
@@ -71,11 +78,6 @@
                                         <p class="mt-2 text-center text-sm text-gray-500">Acceso inmediato tras el pago simulado.</p>
                                     @endif
                                     
-                                    {{-- El mensaje 'info' que envía el controlador si ya está matriculado --}}
-                                    @if (session('info'))
-                                        <div class="bg-blue-100 text-blue-700 p-2 mt-3 rounded">{{ session('info') }}</div>
-                                    @endif
-
                                 @else
                                     <p class="text-center text-sm text-red-500">Solo los compradores pueden inscribirse.</p>
                                 @endif
