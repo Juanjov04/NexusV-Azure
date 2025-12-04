@@ -4,11 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-<<<<<<< HEAD
     "content-hash": "b471ada4e6513b56042987fc3fe427e8",
-=======
-    "content-hash": "02d2ca54ac015cdcc20043a443e68244",
->>>>>>> e52ad97118b532bd6d257f7a6e5e74a6479c5f27
     "packages": [
         {
             "name": "bacon/bacon-qr-code",
@@ -1161,7 +1157,6 @@
             "time": "2025-08-22T14:27:06+00:00"
         },
         {
-<<<<<<< HEAD
             "name": "laravel/cashier",
             "version": "v16.1.0",
             "source": {
@@ -1250,8 +1245,6 @@
             "time": "2025-12-03T00:26:48+00:00"
         },
         {
-=======
->>>>>>> e52ad97118b532bd6d257f7a6e5e74a6479c5f27
             "name": "laravel/framework",
             "version": "v12.37.0",
             "source": {
@@ -2208,7 +2201,6 @@
             "time": "2024-12-08T08:18:47+00:00"
         },
         {
-<<<<<<< HEAD
             "name": "moneyphp/money",
             "version": "v4.8.0",
             "source": {
@@ -2299,8 +2291,6 @@
             "time": "2025-10-23T07:55:09+00:00"
         },
         {
-=======
->>>>>>> e52ad97118b532bd6d257f7a6e5e74a6479c5f27
             "name": "monolog/monolog",
             "version": "3.9.0",
             "source": {
@@ -3640,7 +3630,6 @@
             "time": "2021-02-08T20:43:55+00:00"
         },
         {
-<<<<<<< HEAD
             "name": "stripe/stripe-php",
             "version": "v17.6.0",
             "source": {
@@ -3700,8 +3689,6 @@
             "time": "2025-08-27T19:32:42+00:00"
         },
         {
-=======
->>>>>>> e52ad97118b532bd6d257f7a6e5e74a6479c5f27
             "name": "symfony/clock",
             "version": "v7.3.0",
             "source": {
@@ -4857,7 +4844,6 @@
             "time": "2025-06-27T09:58:17+00:00"
         },
         {
-<<<<<<< HEAD
             "name": "symfony/polyfill-intl-icu",
             "version": "v1.33.0",
             "source": {
@@ -4946,8 +4932,6 @@
             "time": "2025-06-20T22:24:30+00:00"
         },
         {
-=======
->>>>>>> e52ad97118b532bd6d257f7a6e5e74a6479c5f27
             "name": "symfony/polyfill-intl-idn",
             "version": "v1.33.0",
             "source": {
