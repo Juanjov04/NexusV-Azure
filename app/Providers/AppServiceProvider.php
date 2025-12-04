@@ -12,6 +12,7 @@ class AppServiceProvider extends ServiceProvider
 
     public function boot(): void
     {
+        \Illuminate\Support\Facades\URL::forceScheme('https');
         // Definición del Gate 'is-seller' (EXISTENTE)
         Gate::define('is-seller', function (User $user) {
             return $user->isSeller(); 
